@@ -1,0 +1,207 @@
+// app.component.scss
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+  .imagen-principal {
+    display: block; /* Asegúrate de que la imagen sea un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    max-width: 20%; /* Asegúrate de que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    //background-color: black;
+  }
+
+  /* Estilos para el contenedor */
+  .nombre-animado {
+    display: flex;
+    gap: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .letra-animada {
+    display: inline-block;
+    width: 24px; /* Ajusta según el tamaño de la letra */
+    height: 24px;
+    text-align: center;
+    background-color: #f0f0f0; /* Color de fondo del cuadro */
+    transform-origin: center;
+    transform: rotateY(90deg); /* Empieza rotado */
+    animation: girar-letra 0.5s forwards;
+  }
+  
+  @keyframes girar-letra {
+    from {
+      transform: rotateY(90deg); /* Inicia la rotación desde 90 grados */
+      opacity: 0;
+    }
+    to {
+      transform: rotateY(0deg); /* Termina en la posición normal */
+      opacity: 1;
+    }
+  }
+
+  /* CSS para la imagen de carga que cubre toda la pantalla */
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centra los elementos verticalmente */
+    z-index: 9999;
+  }
+  
+  .confetti-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Centra los elementos verticalmente */
+    z-index: 9999;
+  }
+
+.loading-gif {
+  width: 150px; /* Ajustar el tamaño del GIF según lo necesites */
+  height: 150px;
+}
+
+.confetti-gif {
+  width: auto;  /* Ajusta el tamaño del GIF */
+  height: auto;
+}
+
+.main-container {
+  //display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Altura completa de la pantalla */
+  //background: linear-gradient(to bottom right, #00a86b, #0000ff); /* Degradado */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+}
+
+// .container {
+//   padding: 20px;
+//   background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+//   border-radius: 10px;
+//   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+// }
+tr{
+color: black;
+font-size: 28px;
+}
+
+
+  
+.spinner {
+  margin-top: 20px;  /* Espacio entre el GIF y el spinner */
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ajuste{
+  text-align: center;
+  border-right: 2px solid #ccc;
+}
+
+.ajuste2{
+  text-align: left;
+  border-right: 2px solid #ccc;
+}
+
+.titulop {
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #f9f9f9, #c4c1b9, #f9f9f9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px auto;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: glow 2s infinite alternate;
+  text-shadow: 0px 4px 10px rgba(255, 0, 127, 0.8);
+}
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 10px #f9f9f9, 0 0 20px #c4c1b9, 0 0 30px #f9f9f9;
+  }
+  100% {
+      text-shadow: 0 0 20px #f9f9f9, 0 0 40px #c4c1b9, 0 0 50px #f9f9f9;
+  }
+}
